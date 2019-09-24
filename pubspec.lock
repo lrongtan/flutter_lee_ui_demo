@@ -50,6 +50,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.5.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -93,11 +100,9 @@ packages:
   rt_progress_hud:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "1aaa92ebe74a2537935b04d493f57f3e4716cf37"
-      url: "https://github.com/lrongtan/flutter_rt_progress_hud.git"
-    source: git
+      path: "/Users/lirongtan/Desktop/Flutter/location_package/rt_progress_hud"
+      relative: false
+    source: path
     version: "0.0.1"
   sky_engine:
     dependency: transitive

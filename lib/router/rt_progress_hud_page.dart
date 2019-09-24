@@ -21,9 +21,49 @@ class _RTProgressHUDPageState extends State<RTProgressHUDPage> {
 
   Widget _buildChild() {
     return GestureDetector(
-      onTap: (){
-
-      },
-        child: Container());
+        child: Center(
+          child: Container(
+            padding: EdgeInsets.all(10),
+            color: Colors.blue,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: (){
+                    RTProgressHUD.showText(context, "ceshi");
+                    print("hahah");
+                  },
+                  child: Text("纯文字标题"),
+                ),
+                GestureDetector(
+                  onTap: (){
+                    RTProgressHUD.showSuccess(context, "ceshi");
+                  },
+                  child: Text("成功展示"),
+                ),
+                GestureDetector(
+                  onTap: (){
+                    RTProgressHUD.showWarn(context, "ceshi");
+                  },
+                  child: Text("警告展示"),
+                ),
+                GestureDetector(
+                  onTap: (){
+                    RTProgressHUD.showFail(context, "ceshi");
+                  },
+                  child: Text("失败展示"),
+                ),
+                GestureDetector(
+                  onTap: (){
+                    RTProgressHUD.instance.setStyle(HUDStyle.Indicator).setLabel("ceshi").show(context).scheduleDismiss();
+                  },
+                  child: Text("菊花展示"),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }

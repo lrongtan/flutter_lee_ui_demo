@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'router/divergency_around_view_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'router/rt_progress_hud_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,13 +30,13 @@ class _MainPageState extends State<MainPage> {
 
   _Item _item1 = _Item(
       title: "divergency_around_view", routerPage: DivergencyAroundViewPage());
-  _Item _item2 = _Item(
-      title: "rt_progress_hud", routerPage: RTProgressHUDPage());
+  _Item _item2 =
+      _Item(title: "rt_progress_hud", routerPage: RTProgressHUDPage());
 
   @override
   void initState() {
     super.initState();
-    _list = [_item1,_item2];
+    _list = [_item1, _item2];
   }
 
   @override
@@ -46,6 +47,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
     return Scaffold(
       appBar: CupertinoNavigationBar(
         leading: Container(),
@@ -67,13 +69,13 @@ class _MainPageState extends State<MainPage> {
   Widget _itemBuilder(BuildContext context, int index) {
     _Item _item = _list[index];
     return GestureDetector(
-      onTap: (){
-        Navigator.of(context).push(CupertinoPageRoute(builder: (context){
+      onTap: () {
+        Navigator.of(context).push(CupertinoPageRoute(builder: (context) {
           return _item.routerPage;
         }));
       },
       child: Container(
-//      color: Colors.white,
+        color: Colors.white,
         margin: EdgeInsets.only(top: 10, bottom: 10),
         padding: EdgeInsets.only(left: 15, right: 15),
         child: Text(_item.title),
