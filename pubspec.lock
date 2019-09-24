@@ -90,6 +90,15 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.5"
+  rt_progress_hud:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "1aaa92ebe74a2537935b04d493f57f3e4716cf37"
+      url: "https://github.com/lrongtan/flutter_rt_progress_hud.git"
+    source: git
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter

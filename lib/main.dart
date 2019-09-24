@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'router/divergency_around_view_router.dart';
 import 'package:flutter/cupertino.dart';
+import 'router/rt_progress_hud_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,11 +29,13 @@ class _MainPageState extends State<MainPage> {
 
   _Item _item1 = _Item(
       title: "divergency_around_view", routerPage: DivergencyAroundViewPage());
+  _Item _item2 = _Item(
+      title: "rt_progress_hud", routerPage: RTProgressHUDPage());
 
   @override
   void initState() {
     super.initState();
-    _list = [_item1];
+    _list = [_item1,_item2];
   }
 
   @override
